@@ -1,0 +1,32 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\chapter{Data and Data Processing}
+\label{chap:data}
+This will be a summary of the data we use in this project and some data which we don't (but is used by other researchers)
+How is it collected? What format is it in?
+How reliable is it?
+This chapter will also contain a brief overview of some of the preprocessing methods carried out on the variety of datasets used for this project. 
+
+\section{Antarctic Ice}
+\subsection*{Sea Ice}
+\subsection*{Land Ice}
+
+\section{Temperature and other environmental variables}
+
+\section{Climate Indices}
+
+\section{Pre-processing}
+\subsection*{Temporal Averaging}
+\subsection*{Spatial Regridding}
+Because we use a variety of datasets which come in a variety of structures, it is important that standardise the spatial dimensions of each data source. One way we do this is by interpolating each dataset to have a consistent spatial arrangement. This allows for better quality results and makes it easier to calculate measures such as the correlation between 2m temperature and sea ice concentration.
+
+We do the interpolation using the python package Scipy, which makes use of a piecewise cubic, continuously differentiable (C1), and approximately curvature-minimising polynomial surface to determine the value of our given variable at a chosen location. 
+
+We converted the temperature data to the projection the sea ice data is provided in; a south polar stereographic projection with regular grid cells of 25km$\times$25km. We found this resolution to have a good balance between reasonable run-times and good quality results.
+
+\subsection*{Temporal Anomalies}
+\subsection*{Erroneous Values}
+
+\end{document}
