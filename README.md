@@ -4,7 +4,7 @@ This repository contains the Latex code for my MSc Thesis as well as pdfs output
 
 ## Directory Structure
 ### Files in the home directory
-  **main.tex** contains the preamble for the Thesis alongside the main structure for the document.
+  **main.tex** contains the preamble for the thesis alongside the main structure for the document.
   
   **references.bib** references .bib file
   
