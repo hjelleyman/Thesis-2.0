@@ -13,7 +13,11 @@ This chapter will also contain a brief overview of some of the preprocessing met
 \subsection*{Sea Ice}
 
 \subsection*{Thickness of sea ice}
-For this project we are also interest in using the thickness of Antarctic Sea Ice to aid our analyses. This is complicated because measuring the thickness of ice in Antarctica invovles a number of technical challenges
+For this project we are also interest in using the thickness of Antarctic Sea Ice to aid our analyses. This is complicated because measuring the thickness of ice in Antarctica involves a number of technical challenges. Satellites have been used since the late 90s for measuring ice concentration, as described above this involves measuring the albedo of regions with ice and using the measured values as a proxy for the amount of ice. A number of satellite missions have been used to carry this out. We cannot use the same data as for land ice thickness (described below) because that data includes all liquid water in its thickness calculations as well as frozen ice. So we have to turn to other sources of data. These sources are varied, and none of great quality for Antarctica, so we will pick one which seems to give us reasonable values and use it for qualitative rather than quantitative understanding of the behaviour of ice in Antarctica.
+
+One we settled on is collected by NASA's Ice, Cloud, and land Elevation Satellite (ICEsat). This data has been processed by Kurtz and Markus \textcolor{red}{cite}. It is freely available online (insert website here)[]. Limitations we have to consider are that the time period for the data is limited to between 2003-2008. As such we cannot reliably use it for extended periods of time but will use it briefly in our research. Additionally they only have data for Spring, Summer and Autumn, not winter, so we are missing the time of year with the thickest amount of ice.  For use in this project, we will treat this data as a rough indicator for how thick ice can be around Antarctica and treat any calculations using it as rough estimates which can be used to indicate potential relationships but require better data.
+
+The data is in our standard polar stereographic projection of 25km x 25km, \textcolor{red}{link this here} so no interpolation is necessary. In order to obtain an approximate thickness of ice on an annual scale, we will average these three datasets together and use this as our value for the thickness of ice. Because the data is limited in nature this is for qualitative understanding only.
 
 \subsection*{Land Ice}
 \subsection*{Standardising Ice values}
@@ -35,7 +39,7 @@ The GRACE data
 \subsection*{Spatial Regridding}
 Because we use a variety of datasets which come in a variety of structures, it is important that standardise the spatial dimensions of each data source. One way we do this is by interpolating each dataset to have a consistent spatial arrangement. This allows for better quality results and makes it easier to calculate measures such as the correlation between 2m temperature and sea ice concentration.
 
-We do the interpolation using the python package Scipy, which makes use of a piecewise cubic, continuously differentiable (C1), and approximately curvature-minimising polynomial surface to determine the value of our given variable at a chosen location. 
+We do the interpolation using the python package Scipy, which makes use of a piece-wise cubic, continuously differentiable (C1), and approximately curvature-minimising polynomial surface to determine the value of our given variable at a chosen location. 
 
 We converted the temperature data to the projection the sea ice data is provided in; a south polar stereographic projection with regular grid cells of 25km$\times$25km. We found this resolution to have a good balance between reasonable run-times and good quality results.
 
