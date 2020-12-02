@@ -32,12 +32,15 @@ Let $y(t,x,y)$ be our time-series of measured values. $x$ and $y$ are spatial co
 \label{fig:mean_distributions}
 \end{figure}
 
+Looking at these plots, it is worth noting that the mean skin temperature over the ocean is around 0 degrees close to Antarctica, and so in this region we expect to see a large amount of melting and refreezing of ice as the temperature shifts above and below the freezing point, whereas over land, the temperature tends to be much colder. As such we don't expect temperatures to be above freezing often, so while temperature change may be related to variability in ice change it will not necessarily be the predominant driving factor. 
+
+
 \section{Visually comparing temperature and ice}
 Before we get into any aggregation let's compare the amount of ice at each time and space coordinate in our dataset with the temperature at the associated grid point. 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics{images/week8/hres/distribution_of_temperature_ice_both_raw_and_anomalous.pdf}
+    \includegraphics{images/week8/lres/distribution_of_temperature_ice_both_raw_and_anomalous}
     \caption{Distribution of skin temperature against ice. This is a 2 dimensional histogram where the colour represents the number of points in our dataset with a given temperature and amount of ice. The top row contains all the gridpoints over land, the corresponding ice values being Land Ice Liquid Water Equivalent Thickness (LILWET). And the row subplot contains all the gridpoints over the sea, with Sea ice concentration (SIC) plotted on the y-axis. The left column contains the raw values for each measurement and the right column has the anomalous values where the mean value of each variable is removed for each spatial location. (The values for this is plotted below).}
     \label{fig:joint_distribuition_temp_ice}
 \end{figure}
@@ -49,20 +52,20 @@ One thing we need to remember with this plot is that it will be exhibiting some 
 We can learn more about this relationship by looking at the spatial and temporal variability and trends for each of the variables.
 
 \section[Spatial distribution of trends]{Spatial distribution of trends in Antarctic ice and temperature}
-
+Our next step in unpacking the relationship between ice in Antarctica and temperature is to look at the trends we see in the different variables
 \begin{figure}[H]
 \centering
 \begin{subfigure}[h!]{0.49\textwidth}
 \includegraphics[width=\textwidth]{images/week8/lres/trend_sic_distribution}
-\caption{Mean SIC over Antarctica.}
+\caption{Distribution of trends in SIC over Antarctica.}
 \end{subfigure}
 \begin{subfigure}[h!]{0.49\textwidth}
 \includegraphics[width=\textwidth]{images/week8/lres/trend_lic_distribution}
-\caption{Mean Land Ice Liquid Water Equivalent Thickness over Antarctica.}
+\caption{Distribution of trends in Land Ice Liquid Water Equivalent Thickness over Antarctica.}
 \end{subfigure}
 \begin{subfigure}[h!]{0.49\textwidth}
 \includegraphics[width=\textwidth]{images/week8/lres/trend_skt_distribution}
-\caption{Mean Skin Temperature over Antarctica.}
+\caption{Distribution of trends in Skin Temperature over Antarctica.}
 \end{subfigure}
 \caption{Spatial distributions of the mean values of different variables used in this chapter.}
 \label{fig:trend_distributions}
@@ -70,19 +73,37 @@ We can learn more about this relationship by looking at the spatial and temporal
 
 \section{Temporal variability of Antarctic ice and temperature}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics{images/week8/lres/seaice_temperature_timeseries}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{images/week8/lres/six_timeseries}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
 \section{Regression using temperature to predict Antarctic ice}
 
 \section{Statistics for Antarctic ice and temperature}
 
-\section*{Things still to do for this section}
+\pagebreak
+\section*{Things still to do for this Chapter}
 \begin{enumerate}
-    \item Add to the scatter plots
+    \item Correlations
+    \item Temporal Aggregations
     \begin{itemize}
-        \item Trend lines.
-        \item Statistics such as correlations
+        \item Trend lines to ice.
+        \item Remove total ice row for now (until we have volume data).
     \end{itemize}
     \item Regress temperature onto ice.
     \item Fill out red citation notes in the text.
+    \item Generate relevant statistics.
+    \item check comment made at the end of the mean distribution plots.
 \end{enumerate}
 
 \end{document}
