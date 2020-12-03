@@ -17,16 +17,16 @@ Let $y(t,x,y)$ be our time-series of measured values. $x$ and $y$ are spatial co
 \begin{figure}[H]
 \centering
 \begin{subfigure}[h!]{0.49\textwidth}
-\includegraphics[width=\textwidth]{images/week8/lres/mean_sic_distribution}
+\includegraphics[width=0.9\textwidth]{images/week8/lres/mean_sic_distribution}
 \caption{Mean SIC over Antarctica.}
 \end{subfigure}
 \begin{subfigure}[h!]{0.49\textwidth}
-\includegraphics[width=\textwidth]{images/week8/lres/mean_lic_distribution}
+\includegraphics[width=0.9\textwidth]{images/week8/lres/mean_lic_distribution}
 \caption{Mean Land Ice Liquid Water Equivalent Thickness over Antarctica.}
 \end{subfigure}
 \begin{subfigure}[h!]{0.49\textwidth}
-\includegraphics[width=\textwidth]{images/week8/lres/mean_skt_distribution}
-\caption{Mean Skin Temperature over Antarctica.}
+\includegraphics[width=0.9\textwidth]{images/week8/lres/mean_skt_distribution}
+\caption{Mean Skin Temperature over \\ Antarctica.}
 \end{subfigure}
 \caption{Spatial distributions of the mean values of different variables used in this chapter.}
 \label{fig:mean_distributions}
@@ -53,6 +53,8 @@ We can learn more about this relationship by looking at the spatial and temporal
 
 \section[Spatial distribution of trends]{Spatial distribution of trends in Antarctic ice and temperature}
 Our next step in unpacking the relationship between ice in Antarctica and temperature is to look at the trends we see in the different variables
+
+
 \begin{figure}[H]
 \centering
 \begin{subfigure}[h!]{0.49\textwidth}
@@ -71,6 +73,10 @@ Our next step in unpacking the relationship between ice in Antarctica and temper
 \label{fig:trend_distributions}
 \end{figure}
 
+Looking at these plots we can see a clear similarity between the trends in SIC and SKT, the regions to the left of the Antarctic Peninsular (Bellingshausen and Amundsen Seas) with decreasing SIC appear to correspond with an increase in temperature over our time period.
+We notice that
+To get a better understanding of how good this relationship is we will need to do further analysis (see section \ref{sec:correlations_temp_ice} and \ref{sec:regressions_temp_ice}). Before doing that however, we should look at the temporal variability in our variables to see if there are any notable similarities or differences.
+
 \section{Temporal variability of Antarctic ice and temperature}
 
 \begin{figure}[H]
@@ -87,9 +93,67 @@ Our next step in unpacking the relationship between ice in Antarctica and temper
     \label{fig:my_label}
 \end{figure}
 
+\section{Correlations between temperature and Antarctic ice}
+\label{sec:correlations_temp_ice}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_sic_skt_longterm_spatial}
+\caption{Spatial distribution of correlations of SIC and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_sic_skt_longterm_spatial_anmomalous}
+\caption{Spatial distribution of correlations of anomalous SIC and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_sic_skt_longterm_temporal}
+\caption{Temporal distribution of correlations of SIC and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_sic_skt_longterm_temporal_anmomalous}
+\caption{Temporal distribution of correlations of anomalous SIC and SKT.}
+\end{subfigure}
+\caption{Correlations between SIC and SKT. The left column contains correlations for raw data time-series and the right column contains the correlations for anomalous time-series. The top row contains correlations for individual time series. The bottom row contains pattern correlations between the two variables and how that changes over time.}
+\label{fig:correlation_between_SIC_and_SKT.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_lic_skt_shortterm_spatial}
+\caption{Spatial distribution of correlations of LILWET and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_lic_skt_shortterm_spatial_anmomalous}
+\caption{Spatial distribution of correlations of anomalous LILWET and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_lic_skt_shortterm_temporal}
+\caption{Temporal distribution of correlations of LILWET and SKT.}
+\end{subfigure}
+\begin{subfigure}[h!]{0.49\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{images/week8/lres/corr_lic_skt_shortterm_temporal_anmomalous}
+\caption{Temporal distribution of correlations of anomalous LILWET and SKT.}
+\end{subfigure}
+\caption{Correlations between LILWET and SKT. The left column contains correlations for raw data time-series and the right column contains the correlations for anomalous time-series. The top row contains correlations for individual time series. The bottom row contains pattern correlations between the two variables and how that changes over time.}
+\label{fig:correlation_between_SIC_and_SKT.}
+\end{figure}
+
 \section{Regression using temperature to predict Antarctic ice}
+\label{sec:regressions_temp_ice}
 
 \section{Statistics for Antarctic ice and temperature}
+
+\section{Implications for our understanding of Antarctic ice          }
 
 \pagebreak
 \section*{Things still to do for this Chapter}
