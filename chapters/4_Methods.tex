@@ -1,0 +1,74 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\chapter{Methods}
+
+\section{Correlation analysis}
+\label{Methods:pearson}
+
+In this following section, we will set out the methods used and some of the motivations behind them for calculating and analysing the correlations between different variables and SIE and SIC in Antarctica.
+
+\subsection{Pearson correlation coefficient}
+One comparison which we used for identifying connections between two different time series or different time series components is the Pearson correlation component. Taking a time series $x$, and a time series $y$, with elements $x_i$ and $y_i$, and means denoted by $\bar{x}$ and $\bar{y}$; we can calculate the Pearson correlation coefficient $r_{xy}$.
+
+\input{equations/pearsoncorrelation.tex}
+
+The magnitude of the coefficient indicates how well correlated the data is and the sign represents the nature of the relationship. A large positive coefficient is indicative of a strong directly proportional correlation between the two variables, whereas a small negative coefficient indicates a weak correlation where the variables are approximately correlated to each other.
+
+One thing to be careful of when interpreting these results is that the correlation is indicative of a relationship between two variables, it does not imply that a relationship directly exists. To determine that further analysis is required. Additionally, as will be explained in a little more detail below, a high correlation does not necessarily indicate a significant correlation between two variables, yet again, more analysis is required for that.
+
+\subsection{P-values and significance of correlation}
+In order to identify the significance of the calculated correlations, it is not sufficient to simply use the strength of correlation. Instead we used a p-value from a two tailed test with a threshold value of 0.05, giving us a confidence level of 95\%.
+
+The p-value approximately represents the probability of an uncorrelated system producing the correlation which has been calculated. For a more detailed description of how the p-value is calculated see the documentation for scipy. \textcolor{red}{cite this, also do I need to describe it more?}
+
+
+\subsection{Comparing time series by eye}
+As a test beyond simply calculating the correlations and looking at their spatial distributions, for each set of calculations we plotted example time series against each other to give an visual indication on the validity of the calculated correlations.
+
+
+\subsection{\textcolor{red}{[WIP]} Time-lagged correlations}
+When plotting the different time series, specifically the time series of temperature and ice extent in Antarctica \textcolor{red}{link this to the results section}, it was noticed that there was a time lag between the different time series, which caused a decrease in the correlation between these clearly related variables. Other researchers \textcolor{red}{cite this}, solved this by introducing a time lag of one month before computing their correlations. We wanted to take this further by investigating at what time lag, maximal correlations are found spatially, regionally, and overal for each variable.
+
+
+\section{Regression analysis}
+After computing a bunch of correlations We want to establish to what extent we can contribute the behaviour of SIE to the different circulations. We can do this with regression analysis. The first step is to compare the indices individually with SIE. So we take a linear regression of each index with Antarctic Sea ice extent with the following model.
+$$
+\overline{\text{SIE}_{i,j} = m_{i,j}}  \text{IND} + b_{i,j}
+$$
+Where i and j are index values for each gridpoint. SIE is the time series of concentration of sea-ice at that gridpoint and IND is the time series for the index in question. b is a bias term which we will generally ignore as we are more interested in the value for $m_{i,j}$, the regression coefficient of seaice concentration against the index in question. It is worth noting that the index timeseries only come as a single time series and will not include a spatial distribution which needs to be indexed.
+
+\subsection{Contribution of a single index}
+We can extend the results from the above regression analysis to estimate the contribution of each index to the change in seaice over our time period. We do this by multiplying $m_{i,j}$ by the temporal derivative we can gain an estimation for the extent to which we expect seaice to increase or decrease at the gridpoint over our time period soley on the influence of the single index time series.
+$$
+\left. \overline{\frac{d\  \text{SIE}_{i,j}}{dt}}\right|_{\text{IND}} = \frac{d}{dt} \left(m_{i,j}  \text{IND} + b_{i,j}\right) = m_{i,j}  \frac{d\ \text{IND}}{dt}
+$$
+This will give us a spatial distribution of the contribution of each index to the trends in Antarctic sea ice concentration based on a linear regression model. If we normalise this by the true trend in SIC at each gridpoint we can gain further understanding of what this means in relation to what has actually happened over the last 40 years. This also stands as a method we can use to verify the validity of our model.
+
+\section{Multiple Regression}
+
+We can extend this analysis to more complicated models. The first step in this direction is a linear regression where we consider multiple indices at the same time. This hopefully should be more comprehensive than running each linear regression separately and individually. The model we use to predict the concentration time series of sea ice at each gridpoint is as follows.
+$$
+\overline{\text{SIC}_{i,j}\left(t\right)} = a_{i,j} \text{SAM}\left(t\right) + b_{i,j} \text{ENSO}\left(t\right) + c_{i,j} \text{IPO}\left(t\right)+ d_{i,j} \text{DMI}\left(t\right) + e_{i,j}
+$$
+Where the index time series are SAM(t), ENSO(t), IPO(t), and DMI(t) respectively. a, b, c, and d are the regression coefficients at each gridpoint $i, j$. $\overline{\text{SIC}_{i,j}\left(t\right)}$ is the predicted behaviour of Antarctic Sea ice at each gridpoint over the entire time period. We have to be particular with our calculations here because while each index and SIC dataset has a time component, it is not being used as part of the regression, but is used to work out the expected amount of sea ice at a given year or season.
+
+\subsection{Contribution of a single index}
+Like when we compute a single regression we are interested in the individual contribution of each index to the change in Antarctic SIC. We compute this in a similar way using the regression coefficient which corresponds to the specific index of interest and treating it like the gradient of a single regression.
+
+$$
+\left. \overline{\frac{d\  \text{SIE}_{i,j}}{dt}}\right|_{\text{IND}} = \frac{d}{dt} \left(m_{i,j}  \text{IND} + b_{i,j}\right) = m_{i,j}  \frac{d\ \text{IND}}{dt}
+$$
+ If we normalise this by the true change in Antarctic SIC over time at each gridpoint we can gain an understanding of what proportion of what we see happening in SIC over time can be contributed to each index over time.
+ 
+\section{Verification of Regression Analysis}
+
+In order to validate the quality of our regression analysis we can use a few measures. Firstly we can use the covariance of the fitting which is output with the regression calculation. If the coefficients are more than two standard deviations from 0, we can say with 95\% confidence that there exists a meaningful relationship between the index in question and the SIC at that gridpoint. 
+
+Additionally, we can compute the correlation of the predicted SIC change at each location with the actual behaviour of SIC at each location. If this is a large correlation or has a significant p-value we can use this as an indication of the quality of the fitting.
+
+Finally, we can sum over the entire continent and generate a time-series of the expected SIE over the entire continent and compare that to what actually happened. This can be done visually as it will only be two time series. 
+
+We can estimate how good the linear regressions are by comparing the expected sea ice extent for each time point predicted by the regression with the actual extent of sea ice in Antarctica at that time. First we can compare this just visually by plotting the two timeseries together along with the different components. In this case we are particularly interested in the overall trend in sea ice and what proportion of it can be contributed to global atmospheric circulations. We can Take this a step futter and consider the extent to which the sea ice extent variability can be contributed to variability of the different atmospheric circulations which we are interested in. We do this by considering the expected sea ice extent if our linear model was entirely accurate and computing the correlation this has with the actual behaviour of sea ice. By computing a regression of this we can establish what proportion of the variability seen in the the true behaviour of sea ice in Antarctica can be contributed to the different circulations in our model.
+
+\end{document}

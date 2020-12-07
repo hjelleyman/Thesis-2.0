@@ -30,5 +30,32 @@ Additionally to the variety of sources for Antarctic ice, we also used data for 
 \section{Planning the analysis}
 \textcolor{red}{Input flow chart of methods carried out at the end of completing this thesis.}
 
+\section{Structure of the methods used}
+Below we will go into more detail about how each of the procedures mentioned here work and are implemented, however first, let's take a moment to outline the processes carried out on the data for our analysis.
+\begin{enumerate}
+    \item \textbf{Data Wrangling}. First we had to manipulate the raw data for analysis. 
+    \begin{enumerate}
+        \item \textbf{Standardise the data}. The data came from a variety of sources. The idea here is that regardless of the source, we can process everything in the same manner.
+        \item \textbf{Change the resolution}. By lowering the resolution of the data we can speed up our computation. Higher resolutions return better quality results. We did this both temporally and spatially.
+        \item \textbf{Regridding}. In some of the computations, we required the data to represent set coordinates.
+        \item \textbf{Temporal decomposition}. We performed analysis for both standard time series and anomalous time series for each set of data.
+        \item \textcolor{red}{[WIP]} \textbf{Smoothing of data}. In order to make the analysis easier to analyse, we applied band-pass filters and moving averages to a variety of time series. 
+    \end{enumerate}
+    \item \textbf{Correlation analysis}. Our first analysis technique revolved around Pearson correlation coefficients between different time series. 
+    \begin{enumerate}
+        \item \textbf{Correlations}. The primary output here is the correlation between the different time series we are analysing.
+        \item \textbf{P-values}. In order to identify how significant our results are we used p-values from a Student's t-test \textcolor{red}{(confirm this)}.
+        \item \textbf{Compare time series}. As a visual check for the validity of results, we also plotted example time series of the different correlated variables used.
+        \item \textcolor{red}{[WIP]} \textbf{Time-lagged correlations}.
+    \end{enumerate}
+    \item \textcolor{red}{[WIP]} \textbf{Regressions}. In order to quantify the impact different variables have on each other we turned to a multivariate regression analysis.
+    \item \textcolor{red}{[WIP]} \textbf{Temporal breakdown}. In order to identify specific patterns in the data we broke the temporal scale up in a number of ways.
+    \begin{enumerate}
+        \item \textcolor{red}{[WIP]} \textbf{Extreme events}. By taking times when the SIE was at extreme values, we can look at patterns seen in different variables and indices and link what is observed to physical processes.
+    \end{enumerate}
+\end{enumerate}
+
+
+
 \section{Our key findings}
 \end{document}

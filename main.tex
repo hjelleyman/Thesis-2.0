@@ -13,6 +13,7 @@
 \usepackage{tikz}
 \usepackage{natbib}
 \usepackage{tcolorbox}
+\usepackage[toc,page]{appendix}
 % \setlength{\parindent}{0cm}
 
 
@@ -62,12 +63,14 @@
 \frontmatter
 \subfile{chapters/1_Preface}
 
+%%%%%%% Main section of report %%%%%%%
 \mainmatter
 \subfile{chapters/2_Introduction}
 \subfile{chapters/3_Data}
-\subfile{chapters/4_Literature_review}
-\subfile{chapters/5_Ice_Trends_and_Variability}
-\subfile{chapters/6_Temperature_On_Ice}
+\subfile{chapters/4_Methods}
+\subfile{chapters/5_Literature_review}
+\subfile{chapters/6_Ice_Trends_and_Variability}
+\subfile{chapters/7_Temperature_On_Ice}
 
 %%%%%%% Bibliography %%%%%%%
 \pagebreak 
@@ -77,7 +80,7 @@
 \bibliography{references}
 % \bibliography{references2}
 
-\appendix
+%%%%%%% Appendices %%%%%%%
 \subfile{chapters/Appendix}
 
 \end{document}
