@@ -3,9 +3,6 @@
 \begin{document}
 
 \chapter{Introduction}
-
-Ice in Antarctica is critical for our understanding of global climate patterns and climate change. It has a high albedo and stores massive amounts of both energy and water, being intrinsically linked with both the water cycle and energy balance for the Southern Hemisphere. Sea ice melts and reforms around the continent each year, trapping extra C0$_2$ in the Ocean. It is also shown to affect the salinity of the ocean and ocean circulations. 
-The extent of ice is additionally linked to the state of the climate in Antarctica, and therefore by extension, the state of our global climate. Understanding the processes which have driven its behaviours and which could potentially drive the trends and variability we see in both land and sea ice in Antarctica in the future is therefore important for our understanding of the changing climate of Earth.
 For this thesis, the key question we are attempting to ask is this:
 \medskip 
 
@@ -14,7 +11,10 @@ For this thesis, the key question we are attempting to ask is this:
 	\textit{What drives the trends and variability we see in Antarctic ice?}
 \end{tcolorbox}
 
-In order to answer this question we will make use of statistical techniques such as linear regressions and Pearson correlations to determine the relationships which we can observe between ice in Antarctica, different environmental variables such as temperature, Ozone concentration, and surface pressure, and climatic patterns which are known to drive global and southern hemisphere climate such as the El Ni\~no Southern Oscillation and the Southern Annular Mode.
+Our motivation for asking this is as follows. Ice in Antarctica is critical for our understanding of global climate patterns and climate change. It has a high albedo and stores massive amounts of both energy and water, being intrinsically linked with both the water cycle and energy balance for the Southern Hemisphere. Sea ice melts and reforms around the continent each year, trapping extra C0$_2$ in the Ocean. It is also shown to affect the salinity of the ocean and ocean circulations. 
+The extent of ice is additionally linked to the state of the climate in Antarctica, and therefore by extension, the state of our global climate. Understanding the processes which have driven its behaviours and which could potentially drive the trends and variability we see in both land and sea ice in Antarctica in the future is therefore important for our understanding of the changing climate of Earth.
+
+In order to answer our question we will make use of statistical techniques such as linear regressions and Pearson correlations to determine the relationships which we can observe between ice in Antarctica, different environmental variables such as temperature, Ozone concentration, and surface pressure, and climatic patterns which are known to drive global and southern hemisphere climate such as the El Ni\~no Southern Oscillation and the Southern Annular Mode.
 
 This introduction will include details about the data we have used in this project, followed by a brief overview of the analysis carried out on the data and a discussion of our key findings. The rest of the thesis will cover the analysis and results in more detail alongside a literature review which should introduce the key ideas which you need to know to understand the state of contemporary research on ice in Antarctica and its relationship with global climate.
 
@@ -28,7 +28,13 @@ For sea ice, we used concentration from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passi
 Additionally to the variety of sources for Antarctic ice, we also used data for a number of ``environmental variables'' such as temperature and ozone concentration. These are almost entirely sourced from the ECMWF ERA5 reanalysis. Temperature values are verified against station data around Antarctica to ensure that it is of high quality. (See the Data chapter of this thesis for more detail.)
 
 \section{Planning the analysis}
-\textcolor{red}{Input flow chart of methods carried out at the end of completing this thesis.}
+\textcolor{red}{This can be like Figure \ref{fig:flowchart} or the next section of this introduction. Finish this at end of project when we know what we did.}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=\textwidth]{images/flowchart/Flowchart of analysis and methods.pdf}
+    \caption{Option one}
+    \label{fig:flowchart}
+\end{figure}
 
 \section{Structure of the methods used}
 Below we will go into more detail about how each of the procedures mentioned here work and are implemented, however first, let's take a moment to outline the processes carried out on the data for our analysis.
@@ -58,4 +64,9 @@ Below we will go into more detail about how each of the procedures mentioned her
 
 
 \section{Our key findings}
+Our final point of importance before launching into the main body of this thesis is a quick summary of our key findings.
+\begin{itemize}
+    \item Temperature statistically accounts for the majority of trends and variability in Antarctic Sea Ice.
+    \item Local temperature does not statistically account for the trends and variability in Antarctic Land Ice, however remote temperatures seem more promising.
+\end{itemize}
 \end{document}
