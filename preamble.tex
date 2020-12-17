@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt,openany]{book}
+\raggedbottom
+
+%%%%%%% Importing packages %%%%%%%
+\usepackage{layout}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{natbib}
+\usepackage{tcolorbox}
+\usepackage[toc,page]{appendix}
+% \setlength{\parindent}{0cm}
+
+
+%%%%%%% Clickable links %%%%%%%
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=blue,
+	filecolor=blue,
+	linkcolor=blue,
+	urlcolor=blue
+}
+
+%%%%%% Tables %%%%%%%%
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{float}
+
+%%%%%%% Word Counting %%%%%%%
+\newcommand{\detailtexcount}[1]{%
+  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
+  \verbatiminput{#1.wcdetail}%
+}
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
+  \input{#1-words.sum} words%
+}
+\newcommand{\quickcharcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -char -q #1.tex output.bbl > #1-chars.sum }%
+  \input{#1-chars.sum} characters (not including spaces)%
+}
+
+
+%%%%%%% Page styles %%%%%%%
+\setlength{\hoffset}{-1in} \setlength{\oddsidemargin}{40mm} \setlength{\evensidemargin}{30mm}
+\setlength{\textwidth}{\paperwidth-\oddsidemargin-\evensidemargin} \onehalfspacing
+% \setlength{\parskip}{1cm plus 4mm minus 3mm}
+
+%%%%%%% Better captions %%%%%%%
+% Redefine Caption
+\makeatletter
+\let\oldcap\caption
+\renewcommand\caption[1]{\Huge \@firstwordupper#1 \@nil}
+\newcommand\@firstwordupper{}
+\def\@firstwordupper#1. #2\@nil{\oldcap[#1]{#1. #2}\unskip}
+\makeatother
+
+% Don't Redefine Caption
+% \makeatletter
+% \renewcommand\flex[1]{\Huge \@firstwordupper#1 \@nil}
+% \newcommand\@firstwordupper{}
+% \def\@firstwordupper#1. #2\@nil{\caption[#1]{#1. #2}\unskip}
+% \makeatother
+\usepackage{appendix}
+
+%%%%%%% Glossary %%%%%%%
+\usepackage[acronym, toc]{glossaries}
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
+\makeglossaries
+\input{chapters/Appendicies/acronyms}
+
+%%%%%%% For the multiple files %%%%%%%
+\usepackage{subfiles} % Best loaded last in the preamble

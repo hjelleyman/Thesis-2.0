@@ -1,9 +1,30 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-\begin{appendices}
+% Fancy page numbers
+\backmatter
+\appendix
 
-\chapter{Extra Results}
+% References
+\pagebreak 
+\clearpage
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{agsm}
+\bibliography{../manual_references}
 
-\end{appendices}
+% Glossaries
+% \glsaddall
+\printglossary[type=\acronymtype]
+% List of figures
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+% List of tables
+% \clearpage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{List of Tables}
+% \listoftables
+
+\input{chapters/Appendicies/additional_plots}
 \end{document}

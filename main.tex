@@ -1,86 +1,22 @@
-\documentclass[a4paper,12pt,openany]{book}
-\raggedbottom
+\input{preamble}
 
-%%%%%%% Importing packages %%%%%%%
-\usepackage{layout}
-\usepackage{calc}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{float}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{tikz}
-\usepackage{natbib}
-\usepackage{tcolorbox}
-\usepackage[toc,page]{appendix}
-% \setlength{\parindent}{0cm}
-
-
-%%%%%%% Clickable links %%%%%%%
-\usepackage{hyperref}
-\hypersetup{
-	colorlinks,
-	citecolor=blue,
-	filecolor=blue,
-	linkcolor=blue,
-	urlcolor=blue
-}
-
-%%%%%% Tables %%%%%%%%
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage[normalem]{ulem}
-\useunder{\uline}{\ul}{}
-\usepackage{float}
-
-%%%%%%% Word Counting %%%%%%%
-\newcommand{\detailtexcount}[1]{%
-  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
-  \verbatiminput{#1.wcdetail}%
-}
-\newcommand{\quickwordcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
-  \input{#1-words.sum} words%
-}
-\newcommand{\quickcharcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge -char -q #1.tex output.bbl > #1-chars.sum }%
-  \input{#1-chars.sum} characters (not including spaces)%
-}
-
-
-%%%%%%% Page styles %%%%%%%
-\setlength{\hoffset}{-1in} \setlength{\oddsidemargin}{40mm} \setlength{\evensidemargin}{30mm}
-\setlength{\textwidth}{\paperwidth-\oddsidemargin-\evensidemargin} \onehalfspacing
-% \setlength{\parskip}{1cm plus 4mm minus 3mm}
-
-
-%%%%%%% For the multiple files %%%%%%%
-\usepackage{subfiles} % Best loaded last in the preamble
 \begin{document}
-
-
+%%%%%%% Preface %%%%%%%
 \frontmatter
-\subfile{chapters/1_Preface}
+\subfile{chapters/01_Preface}
 
 %%%%%%% Main section of report %%%%%%%
 \mainmatter
-\subfile{chapters/2_Introduction}
-\subfile{chapters/3_Data}
-\subfile{chapters/4_Methods}
-\subfile{chapters/5_Literature_review}
-\subfile{chapters/6_Ice_Trends_and_Variability}
-\subfile{chapters/7_Temperature_On_Ice}
+\subfile{chapters/02_Introduction}
+\subfile{chapters/03_Data}
+\subfile{chapters/04_Methods}
+\subfile{chapters/05_Literature_review}
+\subfile{chapters/06_Ice_Trends_and_Variability}
+\subfile{chapters/07_Temperature_On_Ice}
+\subfile{chapters/08_Land_Ice}
+\subfile{chapters/09_Short_term_variability}
+\subfile{chapters/10_Conclusion}
 
-%%%%%%% Bibliography %%%%%%%
-\pagebreak 
-\clearpage
-\addcontentsline{toc}{chapter}{References}
-\bibliographystyle{agsm}
-\bibliography{references}
-% \bibliography{references2}
-
-%%%%%%% Appendices %%%%%%%
+%%%%%%% Appendices and Bibliography %%%%%%%
 \subfile{chapters/Appendix}
-
 \end{document}
