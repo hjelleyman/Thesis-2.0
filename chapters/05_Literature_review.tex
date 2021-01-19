@@ -3,37 +3,33 @@
 \begin{document}
 
 \chapter{Literature Review}
+\label{chap:lit_review}
 In this literature review, we aim to tell you a story of research which has been done in this area of research before this point in time. In doing this we hope to provide the reader of this thesis an understanding of the strengths and weaknesses of relevant literature. What has and what hasn't been done by other researchers. We also will take some time to delve into the papers most relevant to this project by discussing methods and results which we at least considered using in the process of doing our research.\medskip
 
 This literature review will be structured to look at specific topics which are somehow related to the research we carried out. These topics are included in the left hand column of the table below, alongside with the counts for the numbers of papers we looked at for each topic.
 
-If the reader is looking for a good overview of recent climate science it is worth reading \cite{Clem2016}
+If the reader is looking for a good overview of recent climate science it is worth reading \cite{doi:10.1175/2019BAMSStateoftheClimate.1}.
 
 
 \section{Sea ice trends and variability in Antarctica}
-This section of the literature review will discuss the research papers which we looked at regarding the trends and variability of sea ice extent and area around Antarctica.
+\gls{sie} in Antarctica has changed over the last few years as discussed by \cite{Parkinson2019}. They discuss in detail the behaviour of ice between 1979 and 2018. There has been a steady, although slow increase over the majority of the time period. Despite this steady increase in \gls{sie}, we see a dramatic decrease in \gls{sie} between 2014, where we have our maximum ammount of \gls{sie} of \textcolor{red}{get value} and 2017, where we see the minimum ammount of \gls{sie}. This decrease is larger than any trends seen even in the Arctic, where large decreases in sea ice has been observed. The exact drivers of this are uncertain, although a number of theories have been proposed. This will be discussed in more detail later in this literature review.
+
+Spatial variability is also important for understanding ice in Antarctica fully. Parkinson expands on this by calculating the trends and behaviours seen in different geographic regions of sea ice concentration. It is worth noting that the only region where we see a decreasing trend in Antarctic Sea Ice is in the western Antarctic Peninsula \textcolor{red}{check geography.} \cite{Yuan2018} discusses this as well. Finding that the \gls{rsr} is the only region in Antarctica where we see a statistically significant increase in \gls{sie} over the entire time period. 
+
+It is important to consider the seasonality of the variability we see in Antarctic \gls{sie} as well. \cite{Simpkins} discuss this in some detail. Large-scale climate circulations such as \gls{sam} and \gls{enso} have negilible impact on the longterm trends in \gls{sie}, however they remain significant, at least on a statistical level, on short-term or seasonal variability. 
+
+
 
 \subsection*{Sea ice thickness}
-For measurements on the thickness of Antarctic sea
-
-\section{Land Ice in Antarctica}
-In the chapter \ref{chap:data} of this thesis, we discus the usage of GRACE data sourced from NASA to represent the changes in Antarctic land ice over the last couple of decades. Now, we will discuss what the relevant literature has to say regarding the behaviour of Land ice in Antarctica in the context of this dataset. \cite{Velicogna2014RegionalData} run a statistical analysis of the trends in Antarctic and Greenland land ice masses. They identify regions of significant changes in ice mass and accelerations in the change of ice mass over time. They identify that the majority of mass lost in Antarctica is in the Amundsen Sea and Antarctic peninsular regions. With a total loss of 67 $\pm$ 44 Gt/yr of land ice mass. Below Figure \ref{fig:ice_mass_from_paper} from the paper \textcolor{red}{check I can include this.}
-\begin{figure}[hbt!]
-    \centering
-    \includegraphics[width=\textwidth]{images/from_papers/grl52143-fig-0001-m.jpg}
-    \caption{(a, b) GRACE‐derived Greenland and Antarctica ice mass balance linear trends, dM(t)/dt, in cm/yr of water. (c, d) Accelerations, d2M/dt2, in cm/yr2 for January 2003 to December 2013. Contour interval is 2 cm/yr for the linear trend (Figures a and b) and 0.5 cm/yr2 for the acceleration (Figures c and d). White lines define regions for which time series are calculated in Figure .}
-    \label{fig:ice_mass_from_paper}
-\end{figure}
-
-This paper links the changes to ice mass with ice dynamics. \cite{Flament2020DynamicAltimetry} discusses this in some detail with examples of glaciers in western Antarctica, the location with the largest amount of ice change. Essentially, glaciers in this region are flowing faster which is causing them to thin. This is linked to warming ocean temperatures which have thinned the ice shelf and ice plain as discussed by \cite{corr_doake_jenkins_vaughan_2001}.
+It has been much more dificult to measure the thickness of Antarctic Sea ice, and as such we do not have the same breadth of products for this. The best datasets available at the moment are not continuous and only extend as far back as 2002 \textcolor{red}{double check this}. Consequently there is significantly less research which deals with this as a variable, as opposed to \gls{sie} which is no more than an area measure which is easily taken via satilite.
 
 
-\section{Atmospheric trends and variability in Antarctica}
-This section of the literature review will discuss the research papers which we looked at regarding the trends and variability of atmospheric conditions around Antarctica.
+% \section{Atmospheric trends and variability in Antarctica}
+% This section of the literature review will discuss the research papers which we looked at regarding the trends and variability of atmospheric conditions around Antarctica.
 
 
-\section{Oceanic trends and variability in Antarctica}
-This section of the literature review will discuss the research papers which we looked at regarding the trends and variability of oceanic conditions around Antarctica.
+% \section{Oceanic trends and variability in Antarctica}
+% This section of the literature review will discuss the research papers which we looked at regarding the trends and variability of oceanic conditions around Antarctica.
 
 \section{Sea ice and atmospheric processes}
 This section of the literature review will discuss in some detail, the research which has been carried out to investigate the relationship between sea ice and atmospheric processes in Antarctica and globally.
@@ -66,13 +62,30 @@ They say that a negative phase of IPO and positive phase of SAM associated with 
 \section{Sea ice and oceanic processes}
 This section of the literature review will discuss in some detail, the research which has been carried out to investigate the relationship between sea ice and oceanic processes in Antarctica and globally.
 
-\section{Statistical Methods}
-This section of the literature review will cover a number of the statistical methods used in different papers which we looked at using for this project. 
-\medskip
 
-One such technique we may want to use is change-point analysis as discussed by Beaulieu, Chen, and Sarminento \cite{Beaulieu2012}.
-This is used for looking at changes in temporal regimes for time series, they propose it for the purposes of detecting abrupt climate variations. We will also use it for this purpose. The paper provides a good overview of different types of change-points which exist  \textcolor{red}{Include figure?} and a good overview of different ways in which people go about detecting them. They set out to describe and extend an informational approach to this problem, making use of the Schwartz information criterion to identify change points for a variety of fitting models.
+\section{Land Ice in Antarctica}
+In the chapter \ref{chap:data} of this thesis, we discus the usage of GRACE data sourced from NASA to represent the changes in Antarctic land ice over the last couple of decades. Now, we will discuss what the relevant literature has to say regarding the behaviour of Land ice in Antarctica in the context of this dataset. \cite{Velicogna2014RegionalData} run a statistical analysis of the trends in Antarctic and Greenland land ice masses. They identify regions of significant changes in ice mass and accelerations in the change of ice mass over time. They identify that the majority of mass lost in Antarctica is in the Amundsen Sea and Antarctic peninsular regions. With a total loss of 67 $\pm$ 44 Gt/yr of land ice mass. Below Figure \ref{fig:ice_mass_from_paper} from the paper \textcolor{red}{check I can include this.}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=\textwidth]{images/from_papers/grl52143-fig-0001-m.jpg}
+    \caption{(a, b) GRACE‐derived Greenland and Antarctica ice mass balance linear trends, dM(t)/dt, in cm/yr of water. (c, d) Accelerations, d2M/dt2, in cm/yr2 for January 2003 to December 2013. Contour interval is 2 cm/yr for the linear trend (Figures a and b) and 0.5 cm/yr2 for the acceleration (Figures c and d). White lines define regions for which time series are calculated in Figure .}
+    \label{fig:ice_mass_from_paper}
+\end{figure}
 
+This paper links the changes to ice mass with ice dynamics. \cite{Flament2020DynamicAltimetry} discusses this in some detail with examples of glaciers in western Antarctica, the location with the largest amount of ice change. Essentially, glaciers in this region are flowing faster which is causing them to thin. This is linked to warming ocean temperatures which have thinned the ice shelf and ice plain as discussed by \cite{corr_doake_jenkins_vaughan_2001}.
+
+Clouds and the impact they have on the radiative energy balance which in turn has an impact on the Ice-Sheet mass balance could also be another factor to consider. \cite{Scott2017} discuss this in some detail. By looking at a 4-year record of cloud observations and surface radiation measurements they quantify the \gls{wais} radiation budget and investigate the meteorological link between clouds and the trends seen in the ice sheet.
+
+% \section{Statistical Methods}
+% This section of the literature review will cover a number of the statistical methods used in different papers which we looked at using for this project. 
+% \medskip
+
+% One such technique we may want to use is change-point analysis as discussed by Beaulieu, Chen, and Sarminento \cite{Beaulieu2012}.
+% This is used for looking at changes in temporal regimes for time series, they propose it for the purposes of detecting abrupt climate variations. We will also use it for this purpose. The paper provides a good overview of different types of change-points which exist  \textcolor{red}{Include figure?} and a good overview of different ways in which people go about detecting them. They set out to describe and extend an informational approach to this problem, making use of the Schwartz information criterion to identify change points for a variety of fitting models.
+
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{agsm}
+\bibliography{manual_references}
 
 
 \end{document}
