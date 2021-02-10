@@ -1,5 +1,16 @@
-\documentclass[a4paper,12pt,openany]{book}
-\raggedbottom
+% \documentclass[a4paper,12pt,openany]{book}
+
+\documentclass[a4paper,twoside,12pt]{book}
+
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%%%%%%% Page styles %%%%%%%
+\setlength{\hoffset}{-1in} \setlength{\oddsidemargin}{40mm} \setlength{\evensidemargin}{30mm}
+\setlength{\textwidth}{\paperwidth-\oddsidemargin-\evensidemargin} \onehalfspacing
+% \raggedbottom
 
 %%%%%%% Importing packages %%%%%%%
 \usepackage{layout}
@@ -14,8 +25,25 @@
 \usepackage{natbib}
 \usepackage{tcolorbox}
 \usepackage[toc,page]{appendix}
+\usepackage[textwidth=20mm]{todonotes}
 % \setlength{\parindent}{0cm}
+\usepackage{verbatim}
 
+%%%%%%% Word Count %%%%%%%
+\newcommand{\detailtexcount}[1]{%
+  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
+  \verbatiminput{#1.wcdetail}%
+}
+
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
+  \input{#1-words.sum} words%
+}
+
+\newcommand{\quickcharcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -char -q #1.tex output.bbl > #1-chars.sum }%
+  \input{#1-chars.sum} characters (not including spaces)%
+}
 
 %%%%%%% Clickable links %%%%%%%
 \usepackage{hyperref}
@@ -34,34 +62,14 @@
 \useunder{\uline}{\ul}{}
 \usepackage{float}
 
-%%%%%%% Word Counting %%%%%%%
-\newcommand{\detailtexcount}[1]{%
-  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
-  \verbatiminput{#1.wcdetail}%
-}
-\newcommand{\quickwordcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
-  \input{#1-words.sum} words%
-}
-\newcommand{\quickcharcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge -char -q #1.tex output.bbl > #1-chars.sum }%
-  \input{#1-chars.sum} characters (not including spaces)%
-}
-
-
-%%%%%%% Page styles %%%%%%%
-\setlength{\hoffset}{-1in} \setlength{\oddsidemargin}{40mm} \setlength{\evensidemargin}{30mm}
-\setlength{\textwidth}{\paperwidth-\oddsidemargin-\evensidemargin} \onehalfspacing
-% \setlength{\parskip}{1cm plus 4mm minus 3mm}
-
 %%%%%%% Better captions %%%%%%%
 % Redefine Caption
-\makeatletter
-\let\oldcap\caption
-\renewcommand\caption[1]{\Huge \@firstwordupper#1 \@nil}
-\newcommand\@firstwordupper{}
-\def\@firstwordupper#1. #2\@nil{\oldcap[#1]{#1. #2}\unskip}
-\makeatother
+% \makeatletter
+% \let\oldcap\caption
+% \renewcommand\caption[1]{\Huge \@firstwordupper#1 \@nil}
+% \newcommand\@firstwordupper{}
+% \def\@firstwordupper#1. #2\@nil{\oldcap[#1]{#1. #2}\unskip}
+% \makeatother
 
 % Don't Redefine Caption
 % \makeatletter
@@ -79,14 +87,3 @@
 
 %%%%%%% For the multiple files %%%%%%%
 \usepackage{subfiles} % Best loaded last in the preamble
-
-\makeatletter
-\newcommand{\quickwordcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge #1.tex > #1-words}%
-  \immediate\openin\somefile=#1-words%
-  \read\somefile to \@@localdummy%
-  \immediate\closein\somefile%
-  \setcounter{wordcounter}{\@@localdummy}%
-  \@@localdummy%
-}
-\makeatother

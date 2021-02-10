@@ -24,12 +24,12 @@ This introduction will include details about the data we have used in this proje
 
 For this project we used a wide variety of data sources, detailed in more detail in the Data chapter of this thesis. We will briefly comment on what sources were used for each dataset and variable here.
 
-For sea ice, we used concentration from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passive microwave data, provided by NSIDC. For the thickness of sea ice we use data from \textcolor{red}{where?}. For land ice thickness and volume, we sourced data from the NASA GRACE mission. 
+For sea ice, we used concentration from Nimbus-7 SMMR and DMSP SSM/I-SSMIS Passive microwave data, provided by NSIDC. For the thickness of sea ice we use data from \todo{where?}. For land ice thickness and volume, we sourced data from the NASA GRACE mission. 
 
 Additionally to the variety of sources for Antarctic ice, we also used data for a number of ``environmental variables'' such as temperature and ozone concentration. These are almost entirely sourced from the ECMWF ERA5 reanalysis. Temperature values are verified against station data around Antarctica to ensure that it is of high quality. (See the Data chapter of this thesis for more detail.)
 
 \section{Planning the analysis}
-\textcolor{red}{This can be like Figure \ref{fig:flowchart} or the next section of this introduction. Finish this at end of project when we know what we did.}
+\todo{This can be like Figure \ref{fig:flowchart} or the next section of this introduction. Finish this at end of project when we know what we did.}
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=\textwidth]{images/flowchart/Flowchart of analysis and methods.pdf}
@@ -46,19 +46,19 @@ Below we will go into more detail about how each of the procedures mentioned her
         \item \textbf{Change the resolution}. By lowering the resolution of the data we can speed up our computation. Higher resolutions return better quality results. We did this both temporally and spatially.
         \item \textbf{Regridding}. In some of the computations, we required the data to represent set coordinates.
         \item \textbf{Temporal decomposition}. We performed analysis for both standard time series and anomalous time series for each set of data.
-        \item \textcolor{red}{[WIP]} \textbf{Smoothing of data}. In order to make the analysis easier to analyse, we applied band-pass filters and moving averages to a variety of time series. 
+        \item \todo{[WIP]} \textbf{Smoothing of data}. In order to make the analysis easier to analyse, we applied band-pass filters and moving averages to a variety of time series. 
     \end{enumerate}
     \item \textbf{Correlation analysis}. Our first analysis technique revolved around Pearson correlation coefficients between different time series. 
     \begin{enumerate}
         \item \textbf{Correlations}. The primary output here is the correlation between the different time series we are analysing.
-        \item \textbf{P-values}. In order to identify how significant our results are we used p-values from a Student's t-test \textcolor{red}{(confirm this)}.
+        \item \textbf{P-values}. In order to identify how significant our results are we used p-values from a Student's t-test \todo{(confirm this)}.
         \item \textbf{Compare time series}. As a visual check for the validity of results, we also plotted example time series of the different correlated variables used.
-        \item \textcolor{red}{[WIP]} \textbf{Time-lagged correlations}.
+        \item \todo{[WIP]} \textbf{Time-lagged correlations}.
     \end{enumerate}
-    \item \textcolor{red}{[WIP]} \textbf{Regressions}. In order to quantify the impact different variables have on each other we turned to a multivariate regression analysis.
-    \item \textcolor{red}{[WIP]} \textbf{Temporal breakdown}. In order to identify specific patterns in the data we broke the temporal scale up in a number of ways.
+    \item \todo{[WIP]} \textbf{Regressions}. In order to quantify the impact different variables have on each other we turned to a multivariate regression analysis.
+    \item \todo{[WIP]} \textbf{Temporal breakdown}. In order to identify specific patterns in the data we broke the temporal scale up in a number of ways.
     \begin{enumerate}
-        \item \textcolor{red}{[WIP]} \textbf{Extreme events}. By taking times when the SIE was at extreme values, we can look at patterns seen in different variables and indices and link what is observed to physical processes.
+        \item \todo{[WIP]} \textbf{Extreme events}. By taking times when the SIE was at extreme values, we can look at patterns seen in different variables and indices and link what is observed to physical processes.
     \end{enumerate}
 \end{enumerate}
 
@@ -70,4 +70,5 @@ Our final point of importance before launching into the main body of this thesis
     \item Temperature statistically accounts for the majority of trends and variability in Antarctic Sea Ice.
     \item Local temperature does not statistically account for the trends and variability in Antarctic Land Ice, however remote temperatures seem more promising.
 \end{itemize}
+
 \end{document}
