@@ -126,7 +126,16 @@ Looking at Figure \ref{fig:timeseries_skt} we don't see many similarities betwee
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/2021w5/chapter7/hres/tiemseries_subsurtemp_100_LIC}
+    % \includegraphics{images/2021w5/chapter7/hres/tiemseries_subsurtemp_100_LIC}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_subsurtemp_100_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_subsurtemp_500_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_subsurtemp_700_LIC}
+    \end{subfigure}
     \caption{Time-series of mean \gls{lilwet} and mean subsurface temperature over Antarctica. As the variables do not coexist at the same location, no masking was applied to either variable.}
     \label{fig:timeseries_subsurtemp_100}
 \end{figure}
@@ -135,7 +144,22 @@ Figure \ref{fig:timeseries_subsurtemp_100} is different to the other plots \todo
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/2021w5/chapter7/hres/tiemseries_o3_50_LIC}
+    % \includegraphics{images/2021w5/chapter7/hres/tiemseries_o3_50_LIC}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_700_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_500_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_200_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_100_LIC}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_50_LIC}
+    \end{subfigure}
     \caption{Time-series of mean \gls{lilwet} and mean ozone mass mixing ratio over Antarctica at 50 hPa, 100 hPa 200 hPa, 500 hPa, and 700 hPa. Mean is taken only over land.}
     \label{fig:timeseries_o3_50}
 \end{figure}
@@ -172,10 +196,20 @@ Now we have some understanding of the way different variables behave over both t
     \caption{Spatial distribution of correlations between \gls{lilwet} and \gls{skt}. Including only statistically significant regions with a p-value less than 0.05.}
     \label{fig:correlation_spatial_skt}
 \end{figure}
+\todo{flip colour scheme for temperature plot}
 Figure \ref{fig:correlation_spatial_skt} shows us the correlation between skin temperature and ice in Antarctica. Looking at it, as we did in chapter \ref{chap:temp_and_ice}; we find that temperature has high and statistically significant correlations with Antarctic \gls{sic}. One thing we should note here is that the region just off the coast of western Antarctica (between 50$^\circ$W and 180$^\circ$W). It is possible that this is due to the flow of glaciers in this region into the sea, or alternatively sea ice which persists all year round. More research would be required to identify this in some detail. We also note that aside from a couple of small regions over the \gls{eais} (60$^\circ$E- 120$^\circ$E), \gls{lilwet} has generally insignificant correlations with \gls{skt}.
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/2021w5/chapter7/hres/correlation_spatial_subsurtemp_100}
+    % \includegraphics{images/2021w5/chapter7/hres/correlation_spatial_subsurtemp_100}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_subsurtemp_100}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_subsurtemp_500}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_subsurtemp_700}
+    \end{subfigure}
     \caption{Spatial distribution of correlations between \gls{lilwet} and subsurface temperature. Including only statistically significant regions with a p-value less than 0.05.}
     \label{fig:correlation_spatial_subsurtemp_100}
 \end{figure}
@@ -184,12 +218,27 @@ Figure \ref{fig:correlation_spatial_subsurtemp_100} shows us the spatial distrib
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/2021w5/chapter7/hres/correlation_spatial_o3_50}
+    % \includegraphics{images/2021w5/chapter7/hres/correlation_spatial_o3_50}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_o3_700}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_o3_500}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_o3_200}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_o3_100}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/correlation_spatial_o3_50}
+    \end{subfigure}
     \caption{Spatial distribution of correlations between \gls{lilwet} and ozone mass mixing ratio. Including only statistically significant regions with a p-value less than 0.05.}
     \label{fig:correlation_spatial_o3_50}
 \end{figure}
 
-Figure \ref{fig:correlation_spatial_o3_50} shows us the spatial distributions of correlations between Antarctic ice and the ozone mass mixing ratio in the atmosphere.
+Figure \ref{fig:correlation_spatial_o3_50} shows us the spatial distributions of correlations between Antarctic ice and the ozone mass mixing ratio in the atmosphere at different levels. We should note firstly that the correlations over the sea are largely insignificant. This again is unsurprising as air temperature is the primary driver for \gls{sie}. Whereas, we note that there are a number of significant regions over the continent itself. This is indicative that ozone may be an important variable when it comes to understanding what drives changes in Antarctic land ice. Correlations are highest at lower levels (700 hPa) and low at 200 hPa and 100 hPa. Some more significant correlations can be seen at 50 hPa. It is unclear about the meteorological link between ozone and land ice at 700 hPa, but the behaviour of stratospheric ozone has been linked to precipitation by \textbf{citation}\todo{add citation}.
 
 \begin{figure}[hbt!]
     \centering
@@ -210,8 +259,70 @@ Figure \ref{fig:correlation_spatial_o3_50} shows us the spatial distributions of
 \FloatBarrier
 \subsection{Identifying region with significant decrease}
 
+\begin{figure}
+    \centering
+    \includegraphics{images/2021w5/individuallymade/hres/decreasing_mean_lic_distribution}
+    \caption{Identified region of significant decrease in Antarctic \gls{lilwet}}
+    \label{fig:decreasing_mean_lic_distribution}
+\end{figure}
+
 \FloatBarrier
 \subsection{Spatial correlations}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{images/2021w5/chapter7/hres/decreasing_correlation_spatial_skt}
+    \caption{Spatial distribution of correlations between \gls{lilwet} and \gls{skt}. Including only statistically significant regions with a p-value less than 0.05.}
+    \label{fig:correlation_spatial_skt}
+\end{figure}
+\todo{fix wide figures}
+\begin{figure}[hbt!]
+    \centering
+    % \includegraphics{images/2021w5/chapter7/hres/decreasing_correlation_spatial_subsurtemp_100}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_subsurtemp_100}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_subsurtemp_500}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_subsurtemp_700}
+    \end{subfigure}
+    \caption{Spatial distribution of correlations between \gls{lilwet} and subsurface temperature. Including only statistically significant regions with a p-value less than 0.05.}
+    \label{fig:correlation_spatial_subsurtemp_100}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    % \includegraphics{images/2021w5/chapter7/hres/correlation_spatial_o3_50}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_o3_700}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_o3_500}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_o3_200}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_o3_100}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/decreasing_correlation_spatial_o3_50}
+    \end{subfigure}
+    \caption{Spatial distribution of correlations between \gls{lilwet} and ozone mass mixing ratio. Including only statistically significant regions with a p-value less than 0.05.}
+    \label{fig:correlation_spatial_o3_50}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{images/2021w5/chapter7/hres/decreasing_correlation_spatial_tp}
+    \caption{Spatial distribution of correlations between \gls{lilwet} and total precipitation. Including only statistically significant regions with a p-value less than 0.05.}
+    \label{fig:my_label}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{images/2021w5/chapter7/hres/decreasing_correlation_spatial_u_10}
+    \caption{Spatial distribution of correlations between \gls{lilwet} and wind speed. Including only statistically significant regions with a p-value less than 0.05.}
+    \label{fig:my_label}
+\end{figure}
 
 \FloatBarrier
 \subsection{Regressions}
