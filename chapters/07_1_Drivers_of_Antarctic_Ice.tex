@@ -100,7 +100,7 @@ Now we have some understanding of the spatial distribution of trends in each var
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/T2/timeseries_subplots/hres/temperature}
+    \includegraphics{images/2021w5/chapter7/hres/tiemseries_skt_LIC}
     \caption{Time-series of mean \gls{lilwet} and mean \gls{skt} over Antarctica. Mean is taken only over land.}
     \label{fig:timeseries_skt}
 \end{figure}
@@ -127,12 +127,33 @@ Figure \ref{fig:timeseries_subsurtemp_100} is different to the other plots \todo
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{images/T2/timeseries_subplots/hres/ozone}
-    \caption{Time-series of mean ozone mass mixing ratio over Antarctica at 50 hPa, 100 hPa 200 hPa, 500 hPa, and 700 hPa. Time-series of mean \gls{lilwet} and \gls{sic} have also been included in each plot. (Red and Orange lines respectively).}
+    % \includegraphics{images/2021w5/chapter7/hres/tiemseries_o3_50_LIC}
+    % \begin{subfigure}[b]{0.45\textwidth}
+    % % \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_700_LIC}
+    % \includegraphics[width=\textwidth]{images/T2/timeseries_ice/hres/o3_700}
+    % \end{subfigure}
+    % \begin{subfigure}[b]{0.45\textwidth}
+    % % \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_500_LIC}
+    % \includegraphics[width=\textwidth]{images/T2/timeseries_ice/hres/o3_500}
+    % \end{subfigure}
+    % \begin{subfigure}[b]{0.45\textwidth}
+    % % \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_200_LIC}
+    % \includegraphics[width=\textwidth]{images/T2/timeseries_ice/hres/o3_200}
+    % \end{subfigure}
+    % \begin{subfigure}[b]{0.45\textwidth}
+    % % \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_100_LIC}
+    % \includegraphics[width=\textwidth]{images/T2/timeseries_ice/hres/o3_100}
+    % \end{subfigure}
+    % \begin{subfigure}[b]{0.45\textwidth}
+    % % \includegraphics[width=\textwidth]{images/2021w5/chapter7/hres/tiemseries_o3_50_LIC}
+    % \includegraphics[width=\textwidth]{images/T2/timeseries_ice/hres/o3_50}
+    % \end{subfigure}
+    \includegraphics[width=\textwidth]{images/T2/subpl}
+    \caption{Time-series of mean \gls{lilwet}, mean \gls{sic} and mean ozone mass mixing ratio over Antarctica at 50 hPa, 100 hPa 200 hPa, 500 hPa, and 700 hPa. Mean is taken only over land.}
     \label{fig:timeseries_o3_50}
 \end{figure}
 
-Figure \ref{fig:timeseries_o3_50} shows us the mean ozone mass mixing ratios at different pressure levels and the mean \gls{lilwet} and \gls{sic} lines are included for comparison. There is not much to learn from these plots.
+Figure \ref{fig:timeseries_o3_50} shows us the mean ozone mass mixing ratios at different pressure levels and the mean \gls{lilwet}.\todo{write this up once we have the figure.}
 
 \begin{figure}[hbt!]
     \centering
@@ -158,46 +179,19 @@ Looking at these plots, we do not have much to go off. Most of the variables sho
 
 \section{Regression Analysis}
 
-Now we have some understanding of the way the different variables have behaved over the last 40 years we can begin to do some regression analysis of the different variables with Antarctic Ice. Refer to chapter \ref{chap:methods} for the mathematics of how these results are calculated. We have two results for each variable that we are interested in. 
-
-Firstly, we are interested the regression coefficients for each variable and sea ice. These results will tell us the response of land and sea ice in Antarctica to different variables. Taking for instance, temperature. The units for the regression coefficient of temperature on sea ice is km$^2^\circ$C$^{-1}$ This will therefore tell us how many km$^2$ we might expect \gls{sie} to change if we see a change in temperature of 1 $^\circ$C.
-
-We are also interested in how much of the trend in Antarctic ice can be attributed to the change in different variables. This is also called the congruent trend. The units for the congruent trend of temperature on sea ice is km$^2$yr$^{-1}$ This will therefore tell us how many km$^2$ we might expect \gls{sie} to change in a year based on how temperature has changed historically.
-
 \begin{figure}[hbt!]
     \centering
-    \begin{subfigure}[b]{0.8\textwidth}
+    \begin{subfigure}[b]{\textwidth}
     \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_200_0.05}
-    \caption{200 hPa}
     \end{subfigure}
-    \begin{subfigure}[b]{0.8\textwidth}
+    \begin{subfigure}[b]{\textwidth}
     \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_500_0.05}
-    \caption{500 hPa}
     \end{subfigure}
-    \begin{subfigure}[b]{0.8\textwidth}
+    \begin{subfigure}[b]{\textwidth}
     \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_700_0.05}
-    \caption{700 hPa}
     \end{subfigure}
-    \caption{Regressions of cloud cover at different pressure levels onto Antarctic Ice. Land ice and Sea ice regressions.}
-    \label{fig:regressions_cc_700_0.05}
-\end{figure}
-
-\begin{figure}[hbt!]
-    \centering
-    \begin{subfigure}[b]{0.8\textwidth}
-    \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_200_0.05}
-    \caption{200 hPa}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.8\textwidth}
-    \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_500_0.05}
-    \caption{500 hPa}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.8\textwidth}
-    \includegraphics[width=\textwidth]{images/T2/single_regression/hres/cc_700_0.05}
-    \caption{700 hPa}
-    \end{subfigure}
-    \caption{Regressions of cloud cover at different pressure levels onto Antarctic Ice. Land ice and Sea ice regressions.}
-    \label{fig:regressions_cc_700_0.05}
+    \caption{Regressions of cloud cover onto Antarctic Ice. Land ice and Sea ice regressions.}
+    \label{fig:my_label}
 \end{figure}
 
 \section{Multiple Regression Analysis}
